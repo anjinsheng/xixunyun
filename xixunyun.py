@@ -14,7 +14,7 @@ data={'account':'3500220170910461',#账号
       'platform':'2',
       'registration_id':'1a0018970a242ca8039',
       'request_source':'3',
-      'school_id':'13735',#学校代码
+      'school_id':'',#学校代码
       'system':'5.1.1',
       'uuid':'00:81:24:d9:fc:da'}
 login_header={
@@ -31,12 +31,12 @@ login_data=json.loads(request.text)#登陆成功后返回的信息
 token=login_data['data']['token']
 time.sleep(1)
 #经纬度地址
-latitude='29.366707'#维度
-longitude='105.933456'#经度
+latitude=''#维度
+longitude=''#经度
 print(login_data)
 sign_url='https://api.xixunyun.com/signin_rsa?token='+token+'&from=app&version=4.1.5&platform=android&entrance_year=0&graduate_year=0 '
-sign_data={'address':'重庆水水利电力职业技术学院',#签到地址
-           'address_name':'重庆水水利电力职业技术学院',#签到地点名称
+sign_data={'address':'',#签到地址
+           'address_name':'',#签到地点名称
            'change_sign_resource':'1',
            'comment':'',
            'latitude':"PcsiE2OsHB5/8tdtamFezKcg9jYp4lKOryX8mG68mE32nVFwh1BNzaJgDIaUK0QOnz7iGDgOcyGMwbB85zJT7wf3Dczy5O9z3/mTBOH9zOFhxKhUSUqlpKdfG5+ZV8UJF6evTcYci5YPIpqGI6uifnQmyB/X86bcNGqe1f2i0WU=",
